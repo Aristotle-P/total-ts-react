@@ -5,7 +5,7 @@ interface Props {
 }
 
 /* @ts-expect-error */
-export const Button = (props: Props) => {
+export const Button = (props: Props): JSX.Element => {
   return {
     ohDear: "123",
   };
