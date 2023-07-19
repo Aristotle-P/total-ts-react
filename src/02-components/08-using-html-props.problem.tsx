@@ -1,6 +1,10 @@
 import React from "react";
 
-export const Button = ({ className, ...rest }: {}) => {
+export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
+    className?: string;
+}
+
+export const Button = ({ className, ...rest }: ButtonProps) => {
   return (
     <button {...rest} className={`default-classname ${className}`}></button>
   );
